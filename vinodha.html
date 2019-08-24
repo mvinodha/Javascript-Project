@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vinodha Murugesan</title>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    	* {
+    	box-sizing: border-box;
+		}
+		body{
+				border: 2px solid black;
+		}
+ 		.container{
+ 			text-align: center;
+ 			 		}
+
+ 		.row{
+ 			left:auto;
+ 			right: auto;
+ 			padding-left: 250px;
+
+ 		}
+		.column {
+    		float: left;
+    		width: 25%;
+    		padding: 10px 20px 20px 20px;
+    		border: 2px solid black;
+    		margin: 25px 25px 75px 25px;
+		}
+
+		/* Clearfix (clear floats) */
+		.row::after {
+   			content: "";
+    		clear: both;
+    		display: table;
+
+		}
+  p{
+    font-size: 2em;
+    text-align: center;
+  }
+	</style>
+	<script >
+	function changeBackground(id, color) {
+
+            document.getElementById(id).style.backgroundColor = color;
+        }
+        function myFunction() {
+    var color = document.getElementById("color").value;
+    document.body.style.backgroundColor=color;
+
+}
+function superFunction() {
+    var x = document.getElementById("name").value;
+    document.getElementById("demo").innerHTML = "Hello," + x;
+}
+function lilFunction1()
+{
+var my_array=["Let us be grateful to the people who make us happy; they are the charming gardeners who make our souls blossom.","The foolish man seeks happiness in the distance; the wise grows it under his feet.","Even if happiness forgets you a little bit, never completely forget about it.","If you want to be happy, be.","Most people would rather be certain they're miserable, than risk being happy."];
+var ri= Math.floor(Math.random()*my_array.length);
+document.getElementById("try").innerHTML = my_array[ri];
+
+}
+function lilFunction2()
+{
+var my_array=["There is just some days when it all seems to be wrong and nothing feels right","Never let the pain from your past punish your present and paralyze your future."," Everything takes me longer than I expect. It’s the sad truth about life","The greater your capacity to love, the greater your capacity to feel the pain.","The hardest thing is to hurt yourself for the sake of others’ happiness"];
+var ri= Math.floor(Math.random()*my_array.length);
+document.getElementById("try").innerHTML = my_array[ri];
+
+}
+function lilFunction3()
+{
+var my_array=[" Even The Nicest People Have Their Limits.","I Hope Karma Slaps You In The Face Before I Do.","An Angry Man Opens His Mouth And Shuts His Eyes.","A Quick Temper Will Make A Fool Of You Soon Enough.","My Attitude Will Always Be Based On How You Treat Me."];
+var ri= Math.floor(Math.random()*my_array.length);
+document.getElementById("try").innerHTML = my_array[ri];
+
+}
+
+	</script>
+    </head>
+<body>
+<div class="container">
+<h1>Name <input type="text" name="name" class="box" id="name" oninput="superFunction()"><br></h1>
+<h1>Color <input type="color" id="color" onclick="myFunction()" name="color"><br></h1>
+</div>
+<div class="row">
+  <div class="column">
+  <div id="Div_1" onmouseover="changeBackground(this.id, 'red');"
+        onmouseout="changeBackground(this.id, '#ffffdd');" onclick="lilFunction1()">
+    <img id="colorme" src="happy.jpg"  style="width:100%">
+  </div>
+  </div>
+  <div class="column">
+  <div id="Div_2" onmouseover="changeBackground(this.id, 'black');"
+
+        onmouseout="changeBackground(this.id, '#ffffdd');" onclick="lilFunction2()">
+    <img src="sad.jpeg" style="width:100%">
+  </div>
+  </div>
+  <div class="column">
+  <div id="Div_3" onmouseover="changeBackground(this.id, 'green');"
+
+        onmouseout="changeBackground(this.id, '#ffffdd');" onclick="lilFunction3()">
+    <img src="angry.jpg" style="width:100%">
+  </div>
+  </div>
+  
+</div>
+<p id="demo"></p>
+<p id="try"></p>
+</body>
+</html>
